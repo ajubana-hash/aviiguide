@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/672451/pexels-photo-672451.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            text-align: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.90);
+            padding: 40px;
+            border-radius: 30px;
+            border: 3px solid white;
+            max-width: 850px;
+            margin: 50px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+        }
+
+        h1 {
+            color: #315B85;
+            margin-top: 0;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin: 30px 0;
+        }
+
+        .card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 22px rgba(49, 91, 133, 0.35);
+        }
+
+        .card img {
+            width: 100%;
+            height: 205px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.06);
+        }
+
+        .spot-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(49, 91, 133, 0.92);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 18px;
+            border: 2px solid white;
+            text-align: center;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .spot-name {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.4px;
+        }
+
+        .spot-desc {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            color: #DDF0FF;
+            margin-top: 2px;
+        }
+
+        .card:hover .spot-badge {
+            background-color: #214366;
+            transform: translateX(-50%) scale(1.06);
+        }
+
+        .button-container {
+            margin-top: 25px;
+        }
+
+        button, a {
+            display: inline-block;
+            background-color: white;
+            color: #315B85;
+            padding: 12px 25px;
+            border-radius: 20px;
+            border: 2px solid #8FC8F5;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 0 #78AEE0;
+            transition: 0.3s;
+        }
+
+        button:hover, a:hover {
+            background-color: #8FC8F5;
+            color: white;
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Photo Collections</h1>
+
+        
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/76/77/c2/white-beach.jpg?w=600&h=400&s=1" alt="White Beach">
+                <div class="spot-badge">
+                    <span class="spot-name">White Beach</span>
+                    <span class="spot-desc">Boracay, Aklan</span>
+                       <span class="spot-desc">A beautiful place for vacation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Baluartillo_de_San_Jos%C3%A9%2C_Manila%2C_Filipinas%2C_2023-08-26%2C_DD_41.jpg/1920px-Baluartillo_de_San_Jos%C3%A9%2C_Manila%2C_Filipinas%2C_2023-08-26%2C_DD_41.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Intramuros">
+                <div class="spot-badge">
+                    <span class="spot-name">Intramuros</span>
+                    <span class="spot-desc">Manila, Luzon</span>
+                     <span class="spot-desc">A cool and nice place for pictures</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1198884041/photo/cave-entrance-of-puerto-princesa-subterranean-underground-river-with-longtail-boat-wanderlust.jpg?s=612x612&w=0&k=20&c=siBmQKZWCZUjf22wLQBGKQfeyN_EmNUMB0KNr27lk5A=" alt="Puerto Princesa Underground River">
+                <div class="spot-badge">
+                    <span class="spot-name">Underground River</span>
+                    <span class="spot-desc">Puerto Princesa</span>
+                      <span class="spot-desc">A place to relax and enjoy</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://media.gettyimages.com/id/986871368/photo/kawasan-falls.jpg?s=612x612&w=0&k=20&c=rInB2irCXEsofOA4Sd4M6dRdtc2k68jX7qM6REerP2k=" alt="Kawasan Falls">
+                <div class="spot-badge">
+                    <span class="spot-name">Kawasan Falls</span>
+                    <span class="spot-desc">Badian, Cebu</span>
+                       <span class="spot-desc">Pretty for photography and vacation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1591506578484-d496b18a6908?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Chocolate Hills">
+                <div class="spot-badge">
+                    <span class="spot-name">Chocolate Hills</span>
+                    <span class="spot-desc">Carmen, Bohol</span>
+                 <span class="spot-desc"Well known for its chocolate looks</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/2220809504/photo/puka-shell-beach-in-boracay-philippines.jpg?s=612x612&w=0&k=20&c=aYk8s4TQy33qk4xIU0gdtcYXkFm3OTUIwO3-tHUZUFk=" alt="Puka Shell Beach">
+                <div class="spot-badge">
+                    <span class="spot-name">Puka Shell Beach</span>
+                    <span class="spot-desc">Boracay, Aklan</span>
+                     <span class="spot-desc"Best place to spend with your love ones</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='handson.html'">
+                ← Back
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
