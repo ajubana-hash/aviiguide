@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Guide Tour ♡</title>
+
+    <style>
+        body {
+            /* Replace the URL with your local file name (e.g., 'mayon.jpg') if using your uploaded Mayon Volcano photo */
+            background-image: url("https://images.pexels.com/photos/672451/pexels-photo-672451.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: black;
+            margin-top: 30px;
+        }
+
+        .guide {
+            width: 350px;
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 15px;
+            border: 5px solid white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background-color: rgba(220, 232, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu > div > a {
+            display: inline-block;
+            text-decoration: none;
+            color: #315B85;
+            background-color: #DCEEFF;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu > div > a:hover {
+            background-color: #8FC8F5;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(100, 160, 220, 0.5);
+        }
+
+        .menu > div > a:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 0px #78AEE0;
+        }
+
+        /* Unified Dropdown Styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-top: 8px; /* Keeps hover active while moving cursor down */
+            min-width: 210px;
+            z-index: 10;
+        }
+
+        .dropdown-box {
+            background-color: white;
+            color: #315B85;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .dropdown-box a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #315B85;
+            font-size: 14px;
+            border-bottom: 1px solid #EEF5FC;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-box a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-box a:hover {
+            background-color: #DCEEFF;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Save your uploaded Mayon Volcano photo in your project folder (e.g., as 'mayon.jpg') and update src below if desired -->
+    <img src="guide.png" class="guide" alt="Philippine Tour Guide">
+
+    <nav class="menu">
+
+        <div class="dropdown">
+            <a href="index.html">Home</a>
+            <div class="dropdown-content">
+                <div class="dropdown-box">
+                    <a href="index.html#welcome">Welcome!</a>
+                    <a href="index.html#featured">Featured Destinations</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="about.html">About</a>
+            <div class="dropdown-content">
+                <div class="dropdown-box">
+                    <a href="about.html#about-ph">About the Philippines</a>
+                    <a href="about.html#culture">Our Culture</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="gallery.html">Gallery</a>
+            <div class="dropdown-content">
+                <div class="dropdown-box">
+                    <a href="gallery.html#destinations">Tourist Destinations!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="contact.html">Contact Us</a>
+            <div class="dropdown-content">
+                <div class="dropdown-box">
+                    <a href="contact.html#info">Our Contact Information</a>
+                    <a href="contact.html#message">Send a Message</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+</body>
+</html>
